@@ -11,7 +11,7 @@
                 <th>No</th>
                 <th>Isi Pertanyaan</th>
                 <th>Isi Jawaban</th>
-                <th>Jawaban Baru</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
