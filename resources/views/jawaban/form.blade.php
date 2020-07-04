@@ -1,9 +1,9 @@
 @extends('index')
 
 @section('content')
-    {{dd($jawaban)}}
+    {{-- {{dd($jawaban)}} --}}
     <div class="container">
-        <form action="/pertanyaan" method="POST">
+        <form action="/jawaban/{{id}}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="pertanyaan">Pertanyaan</label>

@@ -1,23 +1,14 @@
 @extends('index')
 
 @section('content')
-
-<div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Judul</th>
-                <th>Isi</th>
-            </tr>
-        </thead>
-        <tbody>      
-            <tr>
-                <td>1</td>
-                <td>{{ $pertanyaan->judul }}</td>
-                <td>{{ $pertanyaan->isi }} </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="container p-3">
+        <p>Judul Pertanyaan : </p>
+        <p class="ml-2 font-weight-light">{{ $pertanyaan->judul }}</p>
+        <p>Isi pertanyaan : </p>
+        <p class="ml-2 font-weight-light">{{ $pertanyaan->isi }} </p>  
+        <p>Tanggal dibuat : </p>
+        <p class="ml-2 font-weight-light">{{ $pertanyaan->tanggal_dibuat }} </p>   
+        <p>Tanggal diperbarui : </p>
+        <p class="ml-2 font-weight-light">{{ $pertanyaan->tanggal_diperbarui }} </p>            
+    </div>
 @endsection

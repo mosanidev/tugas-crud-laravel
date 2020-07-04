@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 
 class JawabanController extends Controller
 {
-    public function index($id) {
+    public function index() {
+        $jawaban = JawabanModel::get_all();
+        return view("jawaban.index", compact('jawaban'));
+    }
+
+    public function show($id) {
         $jawaban = JawabanModel::get_jawaban_by_id($id);
         // dd($jawaban);
-        return view("jawaban.index", compact('jawaban'));
+        return view("jawaban.show", compact('jawaban'));
     }
 
     public function create() {
