@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/pertanyaan', 'PertanyaanController@index');
 Route::get('/pertanyaan/create', 'PertanyaanController@create');
-Route::post('/pertanyaan', 'PertanyaanController@store');
+// Route::post('/pertanyaan', 'PertanyaanController@store');
 Route::get('/pertanyaan/{id}', 'PertanyaanController@show');
 Route::get('/pertanyaan/{id}/edit', 'PertanyaanController@edit');
 Route::put('/pertanyaan/{id}', 'PertanyaanController@update');
@@ -25,6 +25,6 @@ Route::delete('/pertanyaan/{id}', 'PertanyaanController@destroy');
 
 Route::get('/jawaban/{id}', 'JawabanController@show');
 Route::get('/jawaban', 'JawabanController@index');
-Route::get('/jawaban/create', 'JawabanController@create');
-// Route::post('/jawaban/{id}', 'JawabanController@store');
+Route::get('/jawaban/{id}/edit', 'JawabanController@edit_form');
+Route::put('/jawaban/{id}', 'JawabanController@update');
 

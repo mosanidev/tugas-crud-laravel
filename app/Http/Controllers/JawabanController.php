@@ -12,12 +12,18 @@ class JawabanController extends Controller
     }
 
     public function show($id) {
-        $jawaban = JawabanModel::get_jawaban_by_id($id);
+        $jawaban = JawabanModel::get_jawaban_by_pertanyaan_id($id);
         // dd($jawaban);
         return view("jawaban.show", compact('jawaban'));
     }
 
-    public function create() {
-        return view("jawaban.form"); 
+    public function edit_form($id) {
+        $jawaban = JawabanModel::get_jawaban_by_id($id);
+        return view("jawaban.edit", compact('jawaban')); 
     }
+
+    public function update($id, Request $request) {
+        $pertanyaan = JawabanModel::update($id, $request);
+        return redirect('/jawaban');
+    } 
 }

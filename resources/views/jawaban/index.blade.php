@@ -4,7 +4,6 @@
     {{-- {{dd($jawaban->all())}} --}}
     <div class="container">
         <h1>Tabel Jawaban</h1>
-        <a href="/jawaban/create" class="m-2 p-2 btn btn-sm btn-info">Jawab baru</a>
         <table class="table">
             <thead>
             <tr>
@@ -21,7 +20,8 @@
                         <td>{{ $value->pertanyaan }} </td>
                         <td>{{ $value->jawaban }} </td>
                         <td>
-                            <a href="/jawaban/{{$value->pertanyaan_id}}" class="btn btn-sm btn-info">Show</a>
+                            <a href="/jawaban/{{$value->pertanyaan_id}}" class="btn btn-sm btn-info mr-2">Show</a>
+                            <a href="/jawaban/{{$value->id}}/edit" class="btn btn-sm btn-info">Jawab baru</a>
                         </td>
                     </tr>
                 @endforeach
